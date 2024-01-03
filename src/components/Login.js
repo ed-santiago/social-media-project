@@ -27,24 +27,26 @@ function Login({ setIsLoggedIn }) {
   }
 
   return (
-    <form id="login" onSubmit={handleSubmit}>
+    <div id="login">
       <h1>Login</h1>
-      <input
-        type="text"
-        name="username"
-        value={formData.username}
-        onChange={handleChange}
-      />
-      <br />
-      <input
-        type="password"
-        name="password"
-        value={formData.password}
-        onChange={handleChange}
-      />
-      <br />
-      <button type="submit">Login</button>
-    </form>
+      <form id="login_form" onSubmit={handleSubmit}>
+        <input
+          type="text"
+          name="username"
+          value={formData.username}
+          onChange={handleChange}
+        />
+        <br />
+        <input
+          type="password"
+          name="password"
+          value={formData.password}
+          onChange={handleChange}
+        />
+        <br />
+        <button type="submit">Login</button>
+      </form>
+    </div>
   );
 }
 

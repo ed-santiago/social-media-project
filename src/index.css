@@ -5,6 +5,16 @@
 }
 
 #login {
-  padding: 10px;
-  border: 5px solid red;
+  margin-top: 300px;
+  display: grid;
+  place-items: center;
+}
+
+#login_form {
+  background-color: white;
+  padding: 20px;
+}
+
+#login_form h1 {
+  margin-bottom: 20px;
 }
