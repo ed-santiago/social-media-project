@@ -5,21 +5,47 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/*Login*/
+
 #login {
-  margin-top: 300px;
+  margin-top: 200px;
   display: grid;
   place-items: center;
 }
 
 #login_form {
   background-color: white;
-  border-radius: 16px;
+  border-radius: 8px;
   padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #login h1 {
   margin-bottom: 20px;
   font-weight: 900;
+  font-size: 40px;
   color: rgb(24, 119, 242);
 }
 
+#login_form input {
+  height: 50px;
+  width: 350px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(221, 223, 226);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#login_form button {
+  height: 50px;
+  width: 355px;
+  border-radius: 8px;
+  border-style: none;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgb(24, 119, 242);
+  color: white;
+  cursor: pointer;
+}

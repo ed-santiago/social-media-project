@@ -34,6 +34,7 @@ function Login({ setIsLoggedIn }) {
           type="text"
           name="username"
           value={formData.username}
+          placeholder="username"
           onChange={handleChange}
         />
         <br />
@@ -41,6 +42,7 @@ function Login({ setIsLoggedIn }) {
           type="password"
           name="password"
           value={formData.password}
+          placeholder="password"
           onChange={handleChange}
         />
         <br />
