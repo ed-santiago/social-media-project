@@ -9,8 +9,7 @@ function Header() {
       <h1>E</h1>
 
       <form>
-        <input id="input-field" type='text' name='search' placeholder="Search Product" />
-        <button id="submit-btn" type='submit' name='submit' value="">Search</button>
+        <input type='text' name='search' placeholder="Search User" />
       </form>
 
       <FontAwesomeIcon icon={faUser} className="icons" />
