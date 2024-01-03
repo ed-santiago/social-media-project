@@ -28,7 +28,7 @@ function Login({ setIsLoggedIn }) {
 
   return (
     <div id="login">
-      <h1>Login</h1>
+      <h1>eWorld</h1>
       <form id="login_form" onSubmit={handleSubmit}>
         <input
           type="text"
