@@ -21,11 +21,6 @@ function Login({ setIsLoggedIn }) {
     history.push("/");
   }
 
-  function handleLogin() {
-    setIsLoggedIn(true);
-    history.push("/")
-  }
-
   return (
     <div id="login">
       <h1>eWorld</h1>

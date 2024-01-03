@@ -49,3 +49,17 @@
   color: white;
   cursor: pointer;
 }
+
+/*Header*/
+
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: white;
+}
+
+.icons {
+  color: red;
+  font-size: 24px;
+}
