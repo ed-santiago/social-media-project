@@ -63,7 +63,7 @@ header {
 
 header h1 {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   height: 24px;
   width: 24px;
@@ -99,3 +99,5 @@ header img {
   color: red;
   font-size: 24px;
 }
+
+/*Create Post*/

@@ -1,12 +1,14 @@
 import React from "react";
 import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
-import Header from "./Header";
+import CreatePost from "./CreatePost";
 
-function Home({isLoggedIn}) {
-  if(!isLoggedIn) return <Redirect to="/login" />
+function Home({ isLoggedIn }) {
+  if (!isLoggedIn) return <Redirect to="/login" />
 
   return (
-      <Header />
+    <main>
+      <CreatePost />
+    </main>
   );
 }
 
