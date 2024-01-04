@@ -1,6 +1,6 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faXmark, faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons'
 
 function Posts({ profilePicture, name, post, media, likes, comments }) {
 
@@ -13,13 +13,28 @@ function Posts({ profilePicture, name, post, media, likes, comments }) {
           <img id="profile_picture" src={profilePicture} />
           <p>{name}</p>
         </div>
-        <FontAwesomeIcon id="x_button" icon={faXmark}/>
+        <FontAwesomeIcon id="x_button" icon={faXmark} />
       </div>
       <p>{post}</p>
       {postImage}
-      <hr />
       <div>
-        
+        <div>
+          {likes}
+        </div>
+        <div>
+          {comments.length}
+        </div>
+      </div>
+      <hr />
+      <div id="like_comment">
+        <div id="like">
+          <FontAwesomeIcon icon={faThumbsUp} />
+          <p>Like</p>
+        </div>
+        <div id="comment">
+          <FontAwesomeIcon icon={faComment} />
+          <p>Comment</p>
+        </div>
       </div>
     </div>
   );
