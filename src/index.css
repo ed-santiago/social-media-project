@@ -1,8 +1,16 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: rgb(240, 242, 245);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: rgb(240, 242, 245);
+}
+
+main {
+  display: grid;
+  place-items: center;
 }
 
 /*Login*/
@@ -101,3 +109,39 @@ header img {
 }
 
 /*Create Post*/
+
+#create_post {
+  margin-top: 32px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  
+}
+
+#create_post h3 {
+  text-align: center;
+  padding: 10px;
+}
+
+#create_post form {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+#create_post form > * {
+  width: 500px;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-style: none;
+  border-radius: 8px;
+  background-color: rgb(240, 242, 245);
+}
+
+#create_post form button {
+  width: 520px;
+  background-color: rgb(24, 119, 242);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
