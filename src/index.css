@@ -190,3 +190,14 @@ header img {
   background-color: white;
   color: gray
 }
+
+#posts p {
+  padding: 10px;
+}
+
+#posts_media {
+  height: 520px;
+  width: 520px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
