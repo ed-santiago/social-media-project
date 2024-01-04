@@ -115,7 +115,6 @@ header img {
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
-  
 }
 
 #create_post h3 {
@@ -145,4 +144,49 @@ header img {
   color: white;
   font-size: 24px;
   font-weight: bold;
+}
+
+/*Posts*/
+
+#posts {
+  width: 520px;
+  padding: 20px;
+  margin: 16px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#post_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pic_name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pic_name img {
+  margin-right: 10px;
+}
+
+#pic_name p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#profile_picture {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#x_button {
+  font-size: 24px;
+  border-style: none;
+  background-color: white;
+  color: gray
 }
