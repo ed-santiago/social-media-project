@@ -6,7 +6,7 @@ function CreatePost() {
       <h3>Create a post</h3>
       <hr />
       <form>
-        <textarea type='text' name='textareaPost' placeholder="What's on your mind, User?" rows="4" cols="50" />
+        <textarea type='text' name='textareaPost' placeholder="What's on your mind, User?" rows="3" cols="50" />
         <input type='text' name='inputURLPost' placeholder="import image URL" />
         <button>Post</button>
       </form>

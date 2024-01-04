@@ -139,6 +139,7 @@ header img {
 }
 
 #create_post form button {
+  margin-bottom: 0;
   width: 520px;
   background-color: rgb(24, 119, 242);
   color: white;
