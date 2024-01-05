@@ -3,19 +3,21 @@ import Comment from "./Comment";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons'
 
-function Posts({ profilePicture, name, post, media, likes, comments }) {
+function Posts({ id, profilePicture, name, post, media, likes, comments }) {
   const [openComment, setOpenComment] = useState(false);
   const [like, setLike] = useState(likes);
+  const [isLiked, setIsLiked] = useState(false);
 
   const postImage = media.length > 0 ? <img id="posts_media" src={media} alt="post image" /> : null;
 
-  const showComment = openComment ? <Comment comments={comments}/> : null;
+  const showComment = openComment ? <Comment comments={comments} /> : null;
 
   function handleLike() {
-    fetch("https://social-media-project-s52o.onrender.com/posts", {
-      method: "PATCH"
-    })
+    setIsLiked(!isLiked)
+    setLike(isLiked ? like-1 : like+1)
   }
+
+  const thumbStyle = isLiked ? {color: "rgb(24, 119, 242)"} : {color: "gray"};
 
   function handleCommentClick() {
     setOpenComment((openComment) => !openComment);
@@ -34,7 +36,7 @@ function Posts({ profilePicture, name, post, media, likes, comments }) {
       {postImage}
       <div id="like_comment_amount">
         <div>
-          {likes}
+          {like}
           <p>likes</p>
         </div>
         <div>
@@ -44,7 +46,7 @@ function Posts({ profilePicture, name, post, media, likes, comments }) {
       </div>
       <hr />
       <div id="like_comment">
-        <div id="like"  onClick={handleLike}>
+        <div id="like" onClick={handleLike} style={thumbStyle}>
           <FontAwesomeIcon icon={faThumbsUp} />
           <p>Like</p>
         </div>

@@ -21,6 +21,7 @@ function Home({ isLoggedIn }) {
     return (
       <Posts
         key={id}
+        id={id}
         profilePicture={profilePicture}
         name={name}
         post={post}
