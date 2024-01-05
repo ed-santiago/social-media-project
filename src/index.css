@@ -234,14 +234,19 @@ header img {
 
 /*Comment Modal*/
 
-#modal {
-  top: 50%;
-  left: 50%;
-  border-style: none;
-  background-color: white;
+#comments {
+  margin-bottom: 8px;
 }
 
-#modal::backdrop {
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 0.9;
+#comments p {
+  padding: 0;
+}
+
+#addComment {
+  width: 500px;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-style: none;
+  border-radius: 8px;
+  background-color: rgb(240, 242, 245);
 }

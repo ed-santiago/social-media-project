@@ -6,8 +6,8 @@ function Comment({ comments }) {
     const { name, comment } = commentList
     return (
       <div key={name} id="comments">
-        <p>{name}</p>
-        <p>{comment}</p>
+        <p id="comment_name" style={{fontWeight: "bold"}}>{name}</p>
+        <p id="comment_comment">{comment}</p>
       </div>
     );
   })
@@ -15,6 +15,7 @@ function Comment({ comments }) {
   return (
     <div>
       {idk}
+      <input id="addComment" type="text" name="add_comment" placeholder="Add a comment" />
     </div>
   );
 }
