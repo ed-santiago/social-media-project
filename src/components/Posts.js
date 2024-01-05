@@ -1,12 +1,18 @@
 import React, { useState } from "react";
-import CommentModal from "./CommentModal";
+import Comment from "./Comment";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons'
 
 function Posts({ profilePicture, name, post, media, likes, comments }) {
-  const [openModal, setOpenModal] = useState(false);
+  const [openComment, setOpenComment] = useState(false);
 
   const postImage = media.length > 0 ? <img id="posts_media" src={media} alt="post image" /> : null;
+
+  const showComment = openComment ? <Comment /> : null;
+
+  function handleCommentClick() {
+    setOpenComment((openComment) => !openComment);
+  }
 
   return (
     <div id="posts">
@@ -35,21 +41,12 @@ function Posts({ profilePicture, name, post, media, likes, comments }) {
           <FontAwesomeIcon icon={faThumbsUp} />
           <p>Like</p>
         </div>
-        <div id="comment" onClick={() => setOpenModal(true)}>
+        <div id="comment" onClick={handleCommentClick}>
           <FontAwesomeIcon icon={faComment} />
           <p>Comment</p>
         </div>
       </div>
-      <CommentModal
-        openModal={openModal}
-        closeModal={() => setOpenModal(false)}
-        name={name}
-        profilePicture={profilePicture}
-        post={post}
-        media={media}
-        likes={likes}
-        comments={comments}
-      />
+      {showComment}
     </div>
   );
 }
