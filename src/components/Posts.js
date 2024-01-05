@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import CommentModal from "./CommentModal";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faXmark, faThumbsUp, faComment, faMobileAndroidAlt } from '@fortawesome/free-solid-svg-icons'
+import { faXmark, faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons'
 
 function Posts({ profilePicture, name, post, media, likes, comments }) {
   const [openModal, setOpenModal] = useState(false);
@@ -35,12 +35,21 @@ function Posts({ profilePicture, name, post, media, likes, comments }) {
           <FontAwesomeIcon icon={faThumbsUp} />
           <p>Like</p>
         </div>
-        <div id="comment">
+        <div id="comment" onClick={() => setOpenModal(true)}>
           <FontAwesomeIcon icon={faComment} />
           <p>Comment</p>
         </div>
       </div>
-      <CommentModal openModal={openModal} setOpenModal={setOpenModal}/>
+      <CommentModal
+        openModal={openModal}
+        closeModal={() => setOpenModal(false)}
+        name={name}
+        profilePicture={profilePicture}
+        post={post}
+        media={media}
+        likes={likes}
+        comments={comments}
+      />
     </div>
   );
 }
