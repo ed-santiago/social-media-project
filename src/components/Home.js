@@ -6,6 +6,10 @@ import Posts from "./Posts";
 function Home({ isLoggedIn }) {
   const [postsArray, setPostsArray] = useState([]);
 
+  function handleAddPost(newPost) {
+    setPostsArray([newPost, ...postsArray])
+  }
+
   useEffect(() => {
     fetch("https://social-media-project-s52o.onrender.com/posts")
       .then((res) => res.json())
@@ -31,7 +35,7 @@ function Home({ isLoggedIn }) {
 
   return (
     <main>
-      <CreatePost />
+      <CreatePost onAddPost={handleAddPost}/>
       {postElement}
     </main>
   );
