@@ -213,3 +213,21 @@ header img {
   align-items: center;
   color: gray;
 }
+
+#like_comment_amount{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+}
+
+#like_comment_amount > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px 10px 10px;
+}
+
+#like_comment_amount p {
+  padding: 0 0 0 6px;
+}
