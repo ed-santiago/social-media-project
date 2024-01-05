@@ -15,7 +15,7 @@ function Comment({ comments }) {
   return (
     <div>
       {idk}
-      <input id="addComment" type="text" name="add_comment" placeholder="Add a comment" />
+      <input id="add_comment" type="text" name="addComment" placeholder="Add a comment" />
     </div>
   );
 }
