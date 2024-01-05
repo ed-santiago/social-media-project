@@ -8,7 +8,7 @@ function Posts({ profilePicture, name, post, media, likes, comments }) {
 
   const postImage = media.length > 0 ? <img id="posts_media" src={media} alt="post image" /> : null;
 
-  const showComment = openComment ? <Comment /> : null;
+  const showComment = openComment ? <Comment comments={comments}/> : null;
 
   function handleCommentClick() {
     setOpenComment((openComment) => !openComment);

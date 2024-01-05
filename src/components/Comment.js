@@ -1,8 +1,21 @@
-import React from "react";
+import React, { useState } from "react";
 
-function Comment() {
+function Comment({ comments }) {
+
+  const idk = comments.map((commentList) => {
+    const { name, comment } = commentList
+    return (
+      <div key={name} id="comments">
+        <p>{name}</p>
+        <p>{comment}</p>
+      </div>
+    );
+  })
+
   return (
-    <h1>Comments</h1>
+    <div>
+      {idk}
+    </div>
   );
 }
 

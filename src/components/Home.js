@@ -12,8 +12,6 @@ function Home({ isLoggedIn }) {
       .then((posts) => setPostsArray(posts))
   }, [])
 
-  console.log(postsArray);
-
   const postElement = postsArray.map((postItem) => {
     const {id, profilePicture, name, post, media, likes, comments } = postItem;
     return (
