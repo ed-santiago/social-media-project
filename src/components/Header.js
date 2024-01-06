@@ -9,7 +9,7 @@ function Header({ onCreatePostClick }) {
 
       <div id="header_left">
         <h1>E</h1>
-        <NavLink to="/home">
+        <NavLink exact to="/">
           <FontAwesomeIcon id="home_icon" icon={faHouse} />
         </NavLink>
       </div>

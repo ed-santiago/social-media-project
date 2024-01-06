@@ -18,7 +18,7 @@ function Login({ setIsLoggedIn }) {
   function handleSubmit(e) {
     e.preventDefault();
     setIsLoggedIn(true);
-    history.push("/home");
+    history.push("/");
   }
 
   return (

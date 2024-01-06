@@ -4,6 +4,7 @@ import Login from "./components/Login";
 import Header from "./components/Header";
 import Home from "./components/Home";
 import Friends from "./components/Friends";
+import FriendDetails from "./components/FriendDetails";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -19,7 +20,7 @@ function App() {
         <Login setIsLoggedIn={setIsLoggedIn} />
       </Route>
 
-      <Route path="/home">
+      <Route exact path="/">
         <Header onCreatePostClick={handleCreatePostClick}/>
         <Home isLoggedIn={isLoggedIn} createPost={createPost} />
       </Route >
@@ -27,6 +28,11 @@ function App() {
       <Route path="/friends">
         <Header />
         <Friends />
+      </Route>
+
+      <Route exact path="/friends/:name">
+        <Header />
+        <FriendDetails />
       </Route>
     </>
   );
