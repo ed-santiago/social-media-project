@@ -10,13 +10,15 @@ function Friends() {
   }, [])
 
   const friendElement = friendList.map((individualFriend) => {
-    const {id, name, profilePicture, dob, address, friends, workplace, friend} = individualFriend;
+    const { id, name, profilePicture, dob, address, friends, workplace, friend } = individualFriend;
 
     return (
       <div id="individual_friend" key={id}>
         <img src={profilePicture} />
-        <h2>{name}</h2>
-        <p>{friends}</p>
+        <div id="friend_info">
+          <h2>{name}</h2>
+          <button>REMOVE</button>
+        </div>
       </div>
     );
   })
@@ -25,7 +27,7 @@ function Friends() {
     <div id="friends">
       <div id="friends_header">
         <img src="https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg" />
-        <h1 style={{fontSize: "48px"}}>Edmond's Friend List</h1>
+        <h1 style={{ fontSize: "48px" }}>Edmond's Friend List</h1>
       </div>
 
       <div id="friend_list">
