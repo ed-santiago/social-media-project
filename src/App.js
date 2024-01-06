@@ -7,6 +7,11 @@ import Friends from "./components/Friends";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [createPost, setCreatePost] = useState(false);
+
+  function handleCreatePostClick() {
+    setCreatePost(!createPost);
+  }
 
   return (
     <>
@@ -14,9 +19,9 @@ function App() {
         <Login setIsLoggedIn={setIsLoggedIn} />
       </Route>
 
-      <Route exact path="/home">
-        <Header />
-        <Home isLoggedIn={isLoggedIn} />
+      <Route path="/home">
+        <Header onCreatePostClick={handleCreatePostClick}/>
+        <Home isLoggedIn={isLoggedIn} createPost={createPost} />
       </Route >
 
       <Route path="/friends">

@@ -3,8 +3,10 @@ import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import CreatePost from "./CreatePost";
 import Posts from "./Posts";
 
-function Home({ isLoggedIn }) {
+function Home({ isLoggedIn, createPost }) {
   const [postsArray, setPostsArray] = useState([]);
+
+  const createPostComponent = createPost ? <CreatePost onAddPost={handleAddPost}/> : null;
 
   function handleAddPost(newPost) {
     setPostsArray([newPost, ...postsArray])
@@ -36,7 +38,7 @@ function Home({ isLoggedIn }) {
 
   return (
     <main>
-      <CreatePost onAddPost={handleAddPost}/>
+      {createPostComponent}
       {postElement}
     </main>
   );

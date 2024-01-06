@@ -93,14 +93,10 @@ header h1 {
   border-radius: 50%;
   background-color: rgb(240, 242, 245);
   margin-left: 16px;
+  cursor: pointer;
 }
 
-header form {
-  background-color: white;
-  border-style: none;
-}
-
-header form input {
+header button {
   height: 40px;
   width: 350px;
   background-color: rgb(240, 242, 245);
@@ -108,6 +104,8 @@ header form input {
   border-style: none;
   font-size: 16px;
   text-align: center;
+  border-style: none;
+  cursor: pointer;
 }
 
 #friend_icon {
@@ -116,6 +114,7 @@ header form input {
   border-radius: 50%;
   margin-right: 16px;
   background-color: rgb(240, 242, 245);
+  cursor: pointer;
 }
 
 header img {
@@ -123,6 +122,11 @@ header img {
   width: 40px;
   border-radius: 50%;
   object-fit: cover;
+  cursor: pointer;
+}
+
+header a:visited {
+  color: black;
 }
 
 /*Create Post*/
