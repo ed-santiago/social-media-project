@@ -262,3 +262,26 @@ header img {
 
 /*Friend List*/
 
+#friends {
+  display: grid;
+  place-items: center;
+}
+
+#friends_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px;
+  margin-top: 40px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#friends_header img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 40px;
+}
