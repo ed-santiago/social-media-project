@@ -5,6 +5,7 @@ import Header from "./components/Header";
 import Home from "./components/Home";
 import Friends from "./components/Friends";
 import FriendDetails from "./components/FriendDetails";
+import User from "./components/User";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,7 +27,7 @@ function App() {
           <Home isLoggedIn={isLoggedIn} createPost={createPost} />
         </Route >
 
-        <Route exact path="/friends/:name">
+        <Route exact path="/friends/:id">
           <Header />
           <FriendDetails />
         </Route>
@@ -34,6 +35,11 @@ function App() {
         <Route path="/friends">
           <Header />
           <Friends />
+        </Route>
+
+        <Route path="/user">
+          <Header />
+          <User />
         </Route>
       </Switch>
     </>

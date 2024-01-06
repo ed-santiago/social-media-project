@@ -20,7 +20,9 @@ function Header({ onCreatePostClick }) {
         <NavLink to="/friends">
           <FontAwesomeIcon id="friend_icon" icon={faUserGroup} />
         </NavLink>
-        <img src="https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg" />
+        <NavLink to="/user">
+          <img src="https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg" />
+        </NavLink>
       </div>
 
     </header>

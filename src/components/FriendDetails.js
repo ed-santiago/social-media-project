@@ -2,17 +2,23 @@ import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
 
 function FriendDetails() {
-  const [friendDetails, setFriendDetails] = useState(null);
-  const {name} = useParams();
+  const [friendDetails, setFriendDetails] = useState([]);
+  const { id } = useParams();
 
   useEffect(() => {
-    fetch(`https://social-media-project-s52o.onrender.com/users/${name}`)
+    fetch(`https://social-media-project-s52o.onrender.com/users/${id}`)
       .then((r) => r.json())
       .then((friend) => setFriendDetails(friend))
-  }, [name])
+  }, [])
+
+  const { name, profilePicture, dob, address, friends, workplace, friend } = friendDetails;
 
   return (
-    <h1>{name}Friend Details</h1>
+    <div>
+      
+      <img src={profilePicture} />
+      <h1>Friend Details</h1>
+    </div>
   );
 }
 

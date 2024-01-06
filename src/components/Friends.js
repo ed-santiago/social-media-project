@@ -15,7 +15,7 @@ function Friends() {
 
     return (
       <div id="individual_friend" key={id}>
-        <Link exact to={`/friends/${name}`}>
+        <Link to={`/friends/${id}`}>
           <img src={profilePicture} />
         </Link >
         <div id="friend_info">
