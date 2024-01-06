@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom/cjs/react-router-dom.min";
 
 function Friends() {
   const [friendList, setFriendList] = useState([]);
@@ -14,7 +15,9 @@ function Friends() {
 
     return (
       <div id="individual_friend" key={id}>
-        <img src={profilePicture} />
+        <Link exact to={`/friends/${name}`}>
+          <img src={profilePicture} />
+        </Link >
         <div id="friend_info">
           <h2>{name}</h2>
           <button>REMOVE</button>
