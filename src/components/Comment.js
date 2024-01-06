@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 function Comment({ comments }) {
 
-  const idk = comments.map((commentList) => {
+  const commentElement = comments.map((commentList) => {
     const { name, comment } = commentList
     return (
       <div key={name} id="comments">
@@ -14,7 +14,7 @@ function Comment({ comments }) {
 
   return (
     <div>
-      {idk}
+      {commentElement}
       <input id="add_comment" type="text" name="addComment" placeholder="Add a comment" />
     </div>
   );

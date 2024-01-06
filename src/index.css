@@ -96,6 +96,14 @@ header form input {
   text-align: center;
 }
 
+#friend_icon {
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 16px;
+  background-color: rgb(240, 242, 245);
+}
+
 header img {
   height: 40px;
   width: 40px;
@@ -251,3 +259,6 @@ header img {
   border-radius: 8px;
   background-color: rgb(240, 242, 245);
 }
+
+/*Friend List*/
+

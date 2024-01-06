@@ -3,6 +3,7 @@ import { Route } from "react-router-dom/cjs/react-router-dom.min";
 import Login from "./components/Login";
 import Header from "./components/Header";
 import Home from "./components/Home";
+import Friends from "./components/Friends";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -13,10 +14,15 @@ function App() {
         <Login setIsLoggedIn={setIsLoggedIn} />
       </Route>
 
-      <Route exact path="/">
+      <Route exact path="/home">
         <Header />
-        <Home isLoggedIn={isLoggedIn}/>
+        <Home isLoggedIn={isLoggedIn} />
       </Route >
+
+      <Route path="/friends">
+        <Header />
+        <Friends />
+      </Route>
     </>
   );
 }
