@@ -69,6 +69,12 @@ header {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+#header_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 header h1 {
   display: flex;
   justify-content: center;
@@ -79,6 +85,14 @@ header h1 {
   color: white;
   padding: 8px;
   border-radius: 50%;
+}
+
+#home_icon {
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgb(240, 242, 245);
+  margin-left: 16px;
 }
 
 header form {
@@ -109,11 +123,6 @@ header img {
   width: 40px;
   border-radius: 50%;
   object-fit: cover;
-}
-
-.icons {
-  color: red;
-  font-size: 24px;
 }
 
 /*Create Post*/

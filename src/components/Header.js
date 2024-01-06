@@ -1,12 +1,15 @@
 import React from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserGroup } from '@fortawesome/free-solid-svg-icons'
+import { faUserGroup, faHouse } from '@fortawesome/free-solid-svg-icons'
 
 function Header() {
   return (
     <header>
 
-      <h1>E</h1>
+      <div id="header_left">
+        <h1>E</h1>
+        <FontAwesomeIcon id="home_icon" icon={faHouse} />
+      </div>
 
       <form>
         <input type='text' name='search' placeholder="Search User" />
