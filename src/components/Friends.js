@@ -10,8 +10,21 @@ function Friends() {
       .then((friends) => setFriendList(friends))
   }, [])
 
+  function handleRemoveFriend(id) {
+    const updateFriendList = friendList.filter((friend) => friend.id !== id);
+    setFriendList(updateFriendList);
+  }
+
   const friendElement = friendList.map((individualFriend) => {
-    const { id, name, profilePicture, dob, address, friends, workplace, friend } = individualFriend;
+    const { id, name, profilePicture } = individualFriend;
+
+    function handleRemoveClick() {
+      fetch(`https://social-media-project-s52o.onrender.com/users/${id}`, {
+        method: "DELETE"
+      })
+        .then((r) => r.json())
+        .then(() => handleRemoveFriend(id))
+    }
 
     return (
       <div id="individual_friend" key={id}>
@@ -20,7 +33,7 @@ function Friends() {
         </Link >
         <div id="friend_info">
           <h2>{name}</h2>
-          <button>REMOVE</button>
+          <button onClick={handleRemoveClick}>REMOVE</button>
         </div>
       </div>
     );

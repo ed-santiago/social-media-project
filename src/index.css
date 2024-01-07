@@ -333,6 +333,7 @@ header a:visited {
   display: inline-block;
   font-size: 12px;
   margin-top: 30px;
+  cursor: pointer;
 }
 
 /*Friend Details*/
