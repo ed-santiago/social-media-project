@@ -4,21 +4,31 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons'
 import "../css/posts.css";
 
-function Posts({ id, profilePicture, name, post, media, likes, comments }) {
+function Posts({ id, profilePicture, name, post, media, likes, liked, comments, onUpdatedPost }) {
   const [openComment, setOpenComment] = useState(false);
   const [like, setLike] = useState(likes);
-  const [isLiked, setIsLiked] = useState(false);
+  const [isLiked, setIsLiked] = useState(liked);
 
   const postImage = media.length > 0 ? <img id="posts_media" src={media} alt="post image" /> : null;
 
   const showComment = openComment ? <Comment comments={comments} /> : null;
 
   function handleLike() {
-    setIsLiked(!isLiked)
-    setLike(isLiked ? like-1 : like+1)
+    fetch(`https://social-media-project-s52o.onrender.com/posts/${id}`, {
+      method: "PATCH",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        likes: liked ? likes-1 : likes+1,
+        liked: !liked
+      }),
+    })
+      .then((r) => r.json())
+      .then((updatedPost) => onUpdatedPost(updatedPost))
   }
 
-  const thumbStyle = isLiked ? {color: "rgb(24, 119, 242)"} : {color: "gray"};
+  const thumbStyle = liked ? {color: "rgb(24, 119, 242)"} : {color: "gray"};
 
   function handleCommentClick() {
     setOpenComment((openComment) => !openComment);
@@ -37,7 +47,7 @@ function Posts({ id, profilePicture, name, post, media, likes, comments }) {
       {postImage}
       <div id="like_comment_amount">
         <div>
-          {like}
+          {likes}
           <p>likes</p>
         </div>
         <div>
