@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCakeCandles, faLocationDot, faUser } from '@fortawesome/free-solid-svg-icons'
+import "../css/friendDetails.css";
 
 function FriendDetails() {
   const [friendDetails, setFriendDetails] = useState([]);

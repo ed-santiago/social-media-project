@@ -1,0 +1,113 @@
+#login {
+  margin-top: 200px;
+  display: grid;
+  place-items: center;
+}
+
+#login_form {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#login h1 {
+  margin-bottom: 20px;
+  font-weight: 900;
+  font-size: 40px;
+  color: rgb(24, 119, 242);
+}
+
+#login_form input {
+  height: 50px;
+  width: 350px;
+  background-color: white;
+  border: 2px solid rgb(221, 223, 226);
+  border-radius: 8px;
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 16px;
+}
+
+#login_form button {
+  height: 50px;
+  width: 355px;
+  border-radius: 8px;
+  border-style: none;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgb(24, 119, 242);
+  color: white;
+  cursor: pointer;
+}
+
+/*Header*/
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 8px 32px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#header_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  background-color: rgb(24, 119, 242);
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+#home_icon {
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgb(240, 242, 245);
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+header button {
+  height: 40px;
+  width: 350px;
+  background-color: rgb(240, 242, 245);
+  border-radius: 25px;
+  border-style: none;
+  font-size: 16px;
+  text-align: center;
+  border-style: none;
+  cursor: pointer;
+}
+
+#friend_icon {
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 16px;
+  background-color: rgb(240, 242, 245);
+  cursor: pointer;
+}
+
+header img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+header a:visited {
+  color: black;
+}

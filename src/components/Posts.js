@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Comment from "./Comment";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons'
+import "../css/posts.css";
 
 function Posts({ id, profilePicture, name, post, media, likes, comments }) {
   const [openComment, setOpenComment] = useState(false);

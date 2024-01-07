@@ -1,0 +1,36 @@
+#create_post {
+  margin-top: 20px;
+  padding: 0 100px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#create_post h3 {
+  text-align: center;
+  padding: 10px;
+}
+
+#create_post form {
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+#create_post form > * {
+  width: 500px;
+  padding: 10px;
+  margin-bottom: 16px;
+  border-style: none;
+  border-radius: 8px;
+  background-color: rgb(240, 242, 245);
+}
+
+#create_post form button {
+  margin-bottom: 0;
+  width: 520px;
+  background-color: rgb(24, 119, 242);
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}

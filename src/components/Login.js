@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom/cjs/react-router-dom.min";
+import "../css/login.css";
 
 function Login({ setIsLoggedIn }) {
   const history = useHistory();

@@ -1,0 +1,83 @@
+#posts {
+  width: 520px;
+  padding: 20px 120px 0 120px;
+  margin: 16px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#post_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#pic_name {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#pic_name img {
+  margin-right: 10px;
+}
+
+#pic_name p {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#profile_picture {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#x_button {
+  font-size: 24px;
+  border-style: none;
+  background-color: white;
+  color: gray
+}
+
+#posts p {
+  padding: 10px;
+}
+
+#posts_media {
+  height: 520px;
+  width: 520px;
+  object-fit: cover;
+  margin-bottom: 8px;
+}
+
+#like_comment {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+#like_comment > * {
+  display: flex;
+  align-items: center;
+  color: gray;
+}
+
+#like_comment_amount{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+}
+
+#like_comment_amount > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px 10px 10px;
+}
+
+#like_comment_amount p {
+  padding: 0 0 0 6px;
+}
