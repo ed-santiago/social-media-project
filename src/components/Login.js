@@ -17,8 +17,12 @@ function Login({ setIsLoggedIn }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    setIsLoggedIn(true);
-    history.push("/");
+    if (formData.username === "esantiago" && formData.password === "edmond123") {
+      setIsLoggedIn(true);
+      history.push("/");
+    } else {
+      alert("wrong username or password")
+    }
   }
 
   return (
