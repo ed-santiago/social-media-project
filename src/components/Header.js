@@ -1,7 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faUserGroup, faHouse } from '@fortawesome/free-solid-svg-icons'
+import { faUserGroup, faHouse, faRightFromBracket, faBell } from '@fortawesome/free-solid-svg-icons'
+import "../css/header.css"
 
 function Header({ onCreatePostClick }) {
   return (
@@ -9,6 +10,9 @@ function Header({ onCreatePostClick }) {
 
       <div id="header_left">
         <h1>E</h1>
+        <NavLink to="/login">
+          <FontAwesomeIcon id="logout_icon" icon={faRightFromBracket} />
+        </NavLink>
         <NavLink exact to="/">
           <FontAwesomeIcon id="home_icon" icon={faHouse} />
         </NavLink>
@@ -17,6 +21,7 @@ function Header({ onCreatePostClick }) {
       <button onClick={onCreatePostClick}>Create a post</button>
 
       <div>
+        <FontAwesomeIcon id="notification_icon" icon={faBell} />
         <NavLink to="/friends">
           <FontAwesomeIcon id="friend_icon" icon={faUserGroup} />
         </NavLink>

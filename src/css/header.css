@@ -1,0 +1,86 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 8px 32px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#header_left {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 24px;
+  width: 24px;
+  background-color: rgb(24, 119, 242);
+  color: white;
+  padding: 8px;
+  border-radius: 50%;
+}
+
+#logout_icon {
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgb(240, 242, 245);
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+#home_icon {
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: rgb(240, 242, 245);
+  margin-left: 16px;
+  cursor: pointer;
+}
+
+header button {
+  height: 40px;
+  width: 350px;
+  background-color: rgb(240, 242, 245);
+  border-radius: 25px;
+  border-style: none;
+  font-size: 16px;
+  text-align: center;
+  border-style: none;
+  cursor: pointer;
+}
+
+#notification_icon {
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 16px;
+  background-color: rgb(240, 242, 245);
+  cursor: pointer;
+}
+
+#friend_icon {
+  font-size: 24px;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 16px;
+  background-color: rgb(240, 242, 245);
+  cursor: pointer;
+}
+
+header img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+header a:visited {
+  color: black;
+}

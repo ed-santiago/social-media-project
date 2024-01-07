@@ -1,0 +1,59 @@
+#friends {
+  display: grid;
+  place-items: center;
+}
+
+#friends_header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 28px;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#friends_header img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 40px;
+}
+
+#friend_list {
+  display: grid;
+  margin-top: 20px;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+#individual_friend {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+  margin: 10px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+#individual_friend img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+#individual_friend button {
+  background-color: rgb(196, 37, 37);
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin-top: 30px;
+  cursor: pointer;
+}
