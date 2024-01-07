@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom/cjs/react-router-dom.min";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCakeCandles, faLocationDot, faUser } from '@fortawesome/free-solid-svg-icons'
 
 function FriendDetails() {
   const [friendDetails, setFriendDetails] = useState([]);
@@ -11,13 +13,26 @@ function FriendDetails() {
       .then((friend) => setFriendDetails(friend))
   }, [])
 
-  const { name, profilePicture, dob, address, friends, workplace, friend } = friendDetails;
+  const { name, profilePicture, dob, address, friends, workplace } = friendDetails;
 
   return (
-    <div>
-      
-      <img src={profilePicture} />
-      <h1>Friend Details</h1>
+    <div id="friend_details">
+      <div id="friend_details_header">
+        <img src={profilePicture} />
+        <div>
+          <h1>{name}</h1>
+          <div id="friend_amount">
+            <p><b>Friends:</b> {friends}</p>
+            <p id="if_friend">Friend</p>
+          </div>
+        </div>
+        
+      </div>
+      <div id="friend_details_body">
+          <p><b>Date Of Birth:</b> {dob}</p>
+          <p><b>Address:</b> {address}</p>
+          <p><b>Occupation:</b> {workplace}</p>
+        </div>
     </div>
   );
 }
