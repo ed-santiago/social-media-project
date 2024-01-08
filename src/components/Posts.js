@@ -6,12 +6,8 @@ import "../css/posts.css";
 
 function Posts({ id, profilePicture, name, post, media, likes, liked, comments, onUpdatedPost }) {
   const [openComment, setOpenComment] = useState(false);
-  const [like, setLike] = useState(likes);
-  const [isLiked, setIsLiked] = useState(liked);
 
   const postImage = media.length > 0 ? <img id="posts_media" src={media} alt="post image" /> : null;
-
-  const showComment = openComment ? <Comment comments={comments} /> : null;
 
   function handleLike() {
     fetch(`https://social-media-project-s52o.onrender.com/posts/${id}`, {
@@ -33,6 +29,8 @@ function Posts({ id, profilePicture, name, post, media, likes, liked, comments, 
   function handleCommentClick() {
     setOpenComment((openComment) => !openComment);
   }
+
+  const showComment = openComment ? <Comment id={id} comments={comments} /> : null;
 
   return (
     <div id="posts">

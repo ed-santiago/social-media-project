@@ -1,22 +1,57 @@
-import React from "react";
+import React, { useState } from "react";
 import "../css/comment.css"
 
-function Comment({ comments }) {
+function Comment({ id, comments }) {
+  const [newComment, setNewComment] = useState("");
+  const [commentArray, setCommentArray] = useState(comments);
 
-  const commentElement = comments.map((commentList) => {
+  const commentElement = commentArray.map((commentList, index) => {
     const { name, comment } = commentList
     return (
-      <div key={name} id="comments">
-        <p id="comment_name" style={{fontWeight: "bold"}}>{name}</p>
-        <p id="comment_comment">{comment}</p>
+      <div key={index + 1} id="comments">
+        <p style={{ fontWeight: "bold", padding: "0", fontSize:"15px"}}>{name}</p>
+        <p style={{padding: "0", fontSize:"15px"}}>{comment}</p>
       </div>
     );
   })
 
+  function handleNewCommentChange(e) {
+    setNewComment(e.target.value);
+  }
+
+  function handleSubmit(e) {
+    const newCommentData = {
+      name: "Edmond Santiago",
+      comment: newComment
+    }
+
+    if (e.key === "Enter") {
+      fetch(`https://social-media-project-s52o.onrender.com/posts/${id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          comments: [...comments, newCommentData]
+        })
+      })
+        .then((r) => r.json())
+        .then((updateComment) => setCommentArray(updateComment.comments))
+    }
+  }
+
   return (
     <div>
       {commentElement}
-      <input id="add_comment" type="text" name="addComment" placeholder="Add a comment" />
+      <input
+        id="add_comment"
+        type="text"
+        name="addComment"
+        value={newComment}
+        onChange={handleNewCommentChange}
+        onKeyDown={handleSubmit}
+        placeholder="Add a comment"
+      />
     </div>
   );
 }
