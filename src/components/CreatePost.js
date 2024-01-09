@@ -32,7 +32,13 @@ function CreatePost({ onAddPost }) {
       body: JSON.stringify(data),
     })
       .then((r) => r.json())
-      .then((newPost) => onAddPost(newPost))
+      .then((newPost) => {
+        onAddPost(newPost)
+        setPostData({
+          post: "",
+          imgURL: ""
+        })
+      })
   }
 
   return (
