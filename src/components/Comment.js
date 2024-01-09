@@ -36,7 +36,10 @@ function Comment({ id, comments }) {
         })
       })
         .then((r) => r.json())
-        .then((updateComment) => setCommentArray(updateComment.comments))
+        .then((updateComment) => {
+          setCommentArray(updateComment.comments)
+          setNewComment("");
+        })
     }
   }
 
