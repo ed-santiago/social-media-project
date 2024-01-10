@@ -26,7 +26,7 @@ function Comment({ id, comments }) {
     }
 
     if (e.key === "Enter") {
-      fetch(`https://social-media-project-s52o.onrender.com/posts/${id}`, {
+      fetch(`${process.env.REACT_APP_API_URL}/posts/${id}`, {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",

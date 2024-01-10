@@ -6,7 +6,7 @@ function Friends() {
   const [friendList, setFriendList] = useState([]);
 
   useEffect(() => {
-    fetch("https://social-media-project-s52o.onrender.com/users")
+    fetch(`${process.env.REACT_APP_API_URL}/users`)
       .then((r) => r.json())
       .then((friends) => setFriendList(friends))
   }, [])

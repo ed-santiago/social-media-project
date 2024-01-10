@@ -10,7 +10,7 @@ function Posts({ id, profilePicture, name, post, media, likes, liked, comments, 
   const postImage = media.length > 0 ? <img id="posts_media" src={media} alt="post image" /> : null;
 
   function handleLike() {
-    fetch(`https://social-media-project-s52o.onrender.com/posts/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/posts/${id}`, {
       method: "PATCH",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +33,7 @@ function Posts({ id, profilePicture, name, post, media, likes, liked, comments, 
   const showComment = openComment ? <Comment id={id} comments={comments} /> : null;
 
   function handleDeletePost() {
-    fetch(`https://social-media-project-s52o.onrender.com/posts/${id}`, {
+    fetch(`${process.env.REACT_APP_API_URL}/posts/${id}`, {
       method: "DELETE",
     })
       .then((r) => r.json())
