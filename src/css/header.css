@@ -71,6 +71,7 @@ header button {
   margin-right: 16px;
   background-color: rgb(240, 242, 245);
   cursor: pointer;
+  color: black;
 }
 
 header img {
