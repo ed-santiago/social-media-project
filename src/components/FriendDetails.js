@@ -7,7 +7,7 @@ function FriendDetails() {
   const { id } = useParams();
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/users/${id}`)
+    fetch(`https://social-media-project-s52o.onrender.com/users/${id}`)
       .then((r) => r.json())
       .then((friend) => setFriendDetails(friend))
   }, [])

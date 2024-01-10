@@ -29,7 +29,7 @@ function Home({ isLoggedIn, createPost }) {
   }
 
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_API_URL}/posts`)
+    fetch(`https://social-media-project-s52o.onrender.com/posts`)
       .then((res) => res.json())
       .then((posts) => setPostsArray(posts.reverse()))
   }, [postsArray])
