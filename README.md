@@ -1,70 +1,47 @@
 # Getting Started with Create React App
+This project was bootstrapped with [Create React App].
+For more details on React and how to use Create React App visit https://github.com/facebook/create-react-app.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project Title
+eworld - social media project
 
-## Available Scripts
+## Demo Link
+Access my site at https://zingy-youtiao-88a9a1.netlify.app/login
 
-In the project directory, you can run:
+## Table of Contents
 
-### `npm start`
+## About the app
+eworld is my phase-2 project with Academy Xi. The main goal of the project is to showcase the main concepts I have learnt throughout the phase-2 module.
+I wanted to imitate a social media application because it is one of the main applications that is built using react and to demonstrate react tools such as,
+components, props, hooks, react router and data fetching.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies
+I began this project by using create-react-app, it is one of the best way to start building a single-page application in React.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+I also used JavaScript and CSS to build and finish the project.
 
-### `npm test`
+For a Node server, I followed the json-server-template(https://github.com/learn-co-curriculum/json-server-template) 
+to build a database. Afterwards, I used a free service called Render(https://render.com/) to deploy my Node server. This way, I don't need to
+setup and run my server locally every time I need to work on my project.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Finally, once I finished my project I used another free service called Netlify(https://www.netlify.com/) to deploy my application.
 
-### `npm run build`
+## Setup
+To view, explore and experiment with the source code, fork and clone this repository, then run "npm install" then "npm start". Feel free to push to your
+cloned repo but pushing the main branch is not allowed.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Once the app is running in the browser you will be directed to the login page. Simply put
+Username: esantiago
+Password: edmond123
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Approach
+I settled with a social media application because it is one of the common applications built using react. I used FaceBook as my main and only inspiration.
+I copied their color scheme using a Google extention called ColorZilla. I tried my best to imitate the website layout, using mostly grid and flex display.
+I also used best practices such as using components for my header and other parts of the website and React router to navigate to different parts of the
+website, changing the URL while maintaining a single-page application.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Status
+This project is finished and I don't plan working on it any further.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Credits
+Thank you to Academy Xi for giving the main bulk of resources I need, 
