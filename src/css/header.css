@@ -7,6 +7,10 @@ header {
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
+header a {
+  color: black;
+}
+
 #header_left {
   display: flex;
   justify-content: space-between;
@@ -71,7 +75,6 @@ header button {
   margin-right: 16px;
   background-color: rgb(240, 242, 245);
   cursor: pointer;
-  color: black;
 }
 
 header img {
