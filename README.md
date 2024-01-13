@@ -8,8 +8,6 @@ eworld - social media project
 ## Demo Link
 Access my site at https://zingy-youtiao-88a9a1.netlify.app/login
 
-## Table of Contents
-
 ## About the app
 eworld is my phase-2 project with Academy Xi. The main goal of the project is to showcase the main concepts I have learnt throughout the phase-2 module.
 I wanted to imitate a social media application because it is one of the main applications that is built using react and to demonstrate react tools such as,
