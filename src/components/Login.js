@@ -5,8 +5,8 @@ import "../css/login.css";
 function Login({ setIsLoggedIn }) {
   const history = useHistory();
   const [formData, setFormData] = useState({
-    username: "",
-    password: "",
+    username: "user",
+    password: "react123",
   });
 
   function handleChange(e) {
@@ -18,7 +18,7 @@ function Login({ setIsLoggedIn }) {
 
   function handleSubmit(e) {
     e.preventDefault();
-    if (formData.username === "esantiago" && formData.password === "edmond123") {
+    if (formData.username === "user" && formData.password === "react123") {
       setIsLoggedIn(true);
       history.push("/");
     } else {
