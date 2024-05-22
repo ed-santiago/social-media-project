@@ -6,8 +6,10 @@ import "../css/posts.css";
 
 function Posts({ id, profilePicture, name, post, media, likes, liked, comments, onUpdatedPost, onDeletePost }) {
   const [openComment, setOpenComment] = useState(false);
+  const [like, setLike] = useState(false);
+  const [likeCount, setLikeCount] = useState(likes);
 
-  const postImage = media.length > 0 ? <img id="posts_media" src={media} alt="post image" /> : null;
+  const postImage = media.length > 0 ? <img id="posts_media" src={media} alt="" /> : null;
 
   function handleLike() {
     fetch(`https://social-media-project-s52o.onrender.com/posts/${id}`, {
@@ -22,9 +24,11 @@ function Posts({ id, profilePicture, name, post, media, likes, liked, comments, 
     })
       .then((r) => r.json())
       .then((updatedPost) => onUpdatedPost(updatedPost))
+    setLike(!like);
+    setLikeCount(like ? likeCount-1 : likeCount+1);
   }
 
-  const thumbStyle = liked ? {color: "rgb(24, 119, 242)"} : {color: "gray"};
+  const thumbStyle = like ? {color: "rgb(24, 119, 242)"} : {color: "gray"};
 
   function handleCommentClick() {
     setOpenComment((openComment) => !openComment);
@@ -53,7 +57,7 @@ function Posts({ id, profilePicture, name, post, media, likes, liked, comments, 
       {postImage}
       <div id="like_comment_amount">
         <div>
-          {likes}
+          {likeCount}
           <p>likes</p>
         </div>
         <div>
