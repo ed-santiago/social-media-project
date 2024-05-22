@@ -6,6 +6,12 @@ import Posts from "./Posts";
 function Home({ isLoggedIn, createPost }) {
   const [postsArray, setPostsArray] = useState([]);
 
+  useEffect(() => {
+    fetch(`https://social-media-project-s52o.onrender.com/posts`)
+      .then((res) => res.json())
+      .then((posts) => setPostsArray(posts.reverse()))
+  }, [])
+
   const createPostComponent = createPost ? <CreatePost onAddPost={handleAddPost} /> : null;
 
   function handleAddPost(newPost) {
@@ -27,12 +33,6 @@ function Home({ isLoggedIn, createPost }) {
     const deletePost = postsArray.filter((post) => post.id !== deletedPost.id);
     setPostsArray(deletePost);
   }
-
-  useEffect(() => {
-    fetch(`https://social-media-project-s52o.onrender.com/posts`)
-      .then((res) => res.json())
-      .then((posts) => setPostsArray(posts.reverse()))
-  }, [postsArray])
 
   const postElement = postsArray.map((postItem) => {
     const { id, profilePicture, name, post, media, likes, liked, comments } = postItem;
