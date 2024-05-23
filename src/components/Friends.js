@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom/cjs/react-router-dom.min";
 import "../css/friends.css"
 
-function Friends({name}) {
+function Friends({name, profilePicture}) {
   const [friendList, setFriendList] = useState([]);
 
   useEffect(() => {
@@ -43,7 +43,7 @@ function Friends({name}) {
   return (
     <div id="friends">
       <div id="friends_header">
-        <img src="https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg" alt="" />
+        <img src={profilePicture} alt="" />
         <h1 style={{ fontSize: "48px" }}>{`${name}'s Friend List`}</h1>
       </div>
 

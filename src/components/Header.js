@@ -13,7 +13,7 @@ function Header({ onCreatePostClick, profilePicture }) {
         <NavLink to="/login">
           <FontAwesomeIcon id="logout_icon" icon={faRightFromBracket} />
         </NavLink>
-        <NavLink exact to="/">
+        <NavLink exact to="/home">
           <FontAwesomeIcon id="home_icon" icon={faHouse} />
         </NavLink>
       </div>

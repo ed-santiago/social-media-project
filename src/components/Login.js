@@ -20,7 +20,7 @@ function Login({ setIsLoggedIn }) {
     e.preventDefault();
     if (formData.username === "user" && formData.password === "react123") {
       setIsLoggedIn(true);
-      history.push("/");
+      history.push("/home");
     } else {
       alert("wrong username or password")
     }

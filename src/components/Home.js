@@ -12,7 +12,7 @@ function Home({ isLoggedIn, createPost, userName, userPicture }) {
       .then((posts) => setPostsArray(posts.reverse()))
   }, [])
 
-  const createPostComponent = createPost ? <CreatePost onAddPost={handleAddPost} name={userName} userPicture={userPicture} /> : null;
+  const createPostComponent = createPost ? <CreatePost onAddPost={handleAddPost} userName={userName} userPicture={userPicture} /> : null;
 
   function handleAddPost(newPost) {
     setPostsArray([newPost, ...postsArray])

@@ -25,30 +25,31 @@ function App() {
   return (
     <>
       <Switch>
-        <Route path="/login">
+        <Route exact path="/login">
           <Login setIsLoggedIn={setIsLoggedIn} />
         </Route>
-
-        <Route exact path="/">
+        <Route path="/">
           <Header onCreatePostClick={handleCreatePostClick} profilePicture={profileDetails.profilePicture} />
-          <Home isLoggedIn={isLoggedIn} createPost={createPost} userName={profileDetails.name} userPicture={profileDetails.profilePicture} />
-        </Route >
+        </Route>
+      </Switch>
 
+      <Route path="/home">
+        <Home isLoggedIn={isLoggedIn} createPost={createPost} userName={profileDetails.name} userPicture={profileDetails.profilePicture} />
+      </Route >
+
+      <Switch>
         <Route exact path="/friends/:id">
-          <Header profilePicture={profileDetails.profilePicture} />
           <FriendDetails />
         </Route>
 
         <Route path="/friends">
-          <Header profilePicture={profileDetails.profilePicture} />
-          <Friends name={profileDetails.name} />
-        </Route>
-
-        <Route path="/user">
-          <Header profilePicture={profileDetails.profilePicture} />
-          <User profileDetails={profileDetails} setProfileDetails={setProfileDetails} name={profileDetails.name} />
+          <Friends name={profileDetails.name} profilePicture={profileDetails.profilePicture} />
         </Route>
       </Switch>
+
+      <Route path="/user">
+        <User profileDetails={profileDetails} setProfileDetails={setProfileDetails} name={profileDetails.name} />
+      </Route>
     </>
   );
 }

@@ -17,7 +17,7 @@ function FriendDetails() {
   return (
     <div id="friend_details">
       <div id="friend_details_header">
-        <img src={profilePicture} />
+        <img src={profilePicture} alt="" />
         <div>
           <h1>{name}</h1>
           <div id="friend_amount">
@@ -25,13 +25,12 @@ function FriendDetails() {
             <p id="if_friend">Friend</p>
           </div>
         </div>
-        
       </div>
       <div id="friend_details_body">
-          <p><b>Date Of Birth:</b> {dob}</p>
-          <p><b>Address:</b> {address}</p>
-          <p><b>Occupation:</b> {workplace}</p>
-        </div>
+        <p><b>Date Of Birth:</b> {dob}</p>
+        <p><b>Address:</b> {address}</p>
+        <p><b>Occupation:</b> {workplace}</p>
+      </div>
     </div>
   );
 }

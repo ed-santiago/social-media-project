@@ -34,7 +34,7 @@ function Posts({ id, profilePicture, name, post, media, likes, liked, comments, 
     setOpenComment((openComment) => !openComment);
   }
 
-  const showComment = openComment ? <Comment id={id} comments={comments} name={userName} /> : null;
+  const showComment = openComment ? <Comment id={id} comments={comments} userName={userName} /> : null;
 
   function handleDeletePost() {
     fetch(`https://social-media-project-s52o.onrender.com/posts/${id}`, {
