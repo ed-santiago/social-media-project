@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/comment.css"
 
-function Comment({ id, comments }) {
+function Comment({ id, comments, name }) {
   const [newComment, setNewComment] = useState("");
   const [commentArray, setCommentArray] = useState(comments);
 
@@ -21,7 +21,7 @@ function Comment({ id, comments }) {
 
   function handleSubmit(e) {
     const newCommentData = {
-      name: "Edmond Santiago",
+      name: name,
       comment: newComment
     }
 

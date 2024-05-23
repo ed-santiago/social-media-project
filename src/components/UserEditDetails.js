@@ -1,19 +1,27 @@
 import React from "react";
 
-function UserEditDetails() {
+function UserEditDetails({editProfile, onChange, onSubmit}) {
+  const {profilePicture, name, dob, address, occupation} = editProfile;
+
   return (
-    <form>
+    <form onSubmit={onSubmit}>
       <h2>Edit Profile</h2>
       <button type="submit">Save</button>
 
-      <label for="dob">Date Of Birth: </label>
-      <input id="dob" type="date" name="dob" value="" />
+      <label htmlFor="profilePicture">Profile Picture: </label>
+      <input id="profilePicture" type="url" name="profilePicture" value={profilePicture} onChange={onChange} />
 
-      <label for="address">Address: </label>
-      <input id="address" type="text" name="address" value="" />
+      <label htmlFor="name">Name: </label>
+      <input id="name" type="text" name="name" value={name} onChange={onChange} />
 
-      <label for="occupation">Occupation: </label>
-      <input id="occupation" type="text" name="occupation" value="" />
+      <label htmlFor="dob">Date Of Birth: </label>
+      <input id="dob" type="date" name="dob" value={dob} onChange={onChange} />
+
+      <label htmlFor="address">Address: </label>
+      <input id="address" type="text" name="address" value={address} onChange={onChange} />
+
+      <label htmlFor="occupation">Occupation: </label>
+      <input id="occupation" type="text" name="occupation" value={occupation} onChange={onChange} />
     </form>
   );
 }

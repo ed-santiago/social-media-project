@@ -3,7 +3,7 @@ import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import CreatePost from "./CreatePost";
 import Posts from "./Posts";
 
-function Home({ isLoggedIn, createPost }) {
+function Home({ isLoggedIn, createPost, userName, userPicture }) {
   const [postsArray, setPostsArray] = useState([]);
 
   useEffect(() => {
@@ -12,7 +12,7 @@ function Home({ isLoggedIn, createPost }) {
       .then((posts) => setPostsArray(posts.reverse()))
   }, [])
 
-  const createPostComponent = createPost ? <CreatePost onAddPost={handleAddPost} /> : null;
+  const createPostComponent = createPost ? <CreatePost onAddPost={handleAddPost} name={userName} userPicture={userPicture} /> : null;
 
   function handleAddPost(newPost) {
     setPostsArray([newPost, ...postsArray])
@@ -49,6 +49,8 @@ function Home({ isLoggedIn, createPost }) {
         comments={comments}
         onUpdatedPost={handleUpdatedPost}
         onDeletePost={handleDeletePost}
+        userName={userName}
+        userPicture={userPicture}
       />
     );
   });

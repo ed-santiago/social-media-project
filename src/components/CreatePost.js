@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/createPost.css";
 
-function CreatePost({ onAddPost }) {
+function CreatePost({ onAddPost, name, userPicture }) {
   const [postData, setPostData] = useState({
     post: "",
     imgURL: "",
@@ -17,8 +17,8 @@ function CreatePost({ onAddPost }) {
   function handleSubmit(e) {
     e.preventDefault();
     const data = {
-      profilePicture: "https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg",
-      name: "Edmond Santiago",
+      profilePicture: userPicture,
+      name: name,
       post: postData.post,
       media: postData.imgURL,
       likes: 0,

@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserGroup, faHouse, faRightFromBracket, faBell } from '@fortawesome/free-solid-svg-icons'
 import "../css/header.css"
 
-function Header({ onCreatePostClick }) {
+function Header({ onCreatePostClick, profilePicture }) {
   return (
     <header>
 
@@ -26,7 +26,7 @@ function Header({ onCreatePostClick }) {
           <FontAwesomeIcon id="friend_icon" icon={faUserGroup} />
         </NavLink>
         <NavLink to="/user">
-          <img src="https://t4.ftcdn.net/jpg/05/62/99/31/360_F_562993122_e7pGkeY8yMfXJcRmclsoIjtOoVDDgIlh.jpg" />
+          <img src={profilePicture} />
         </NavLink>
       </div>
 

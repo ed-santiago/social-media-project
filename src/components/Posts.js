@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faXmark, faThumbsUp, faComment } from '@fortawesome/free-solid-svg-icons'
 import "../css/posts.css";
 
-function Posts({ id, profilePicture, name, post, media, likes, liked, comments, onUpdatedPost, onDeletePost }) {
+function Posts({ id, profilePicture, name, post, media, likes, liked, comments, onUpdatedPost, onDeletePost, userName, userPicture }) {
   const [openComment, setOpenComment] = useState(false);
   const [like, setLike] = useState(false);
   const [likeCount, setLikeCount] = useState(likes);
@@ -34,7 +34,7 @@ function Posts({ id, profilePicture, name, post, media, likes, liked, comments, 
     setOpenComment((openComment) => !openComment);
   }
 
-  const showComment = openComment ? <Comment id={id} comments={comments} /> : null;
+  const showComment = openComment ? <Comment id={id} comments={comments} name={userName} /> : null;
 
   function handleDeletePost() {
     fetch(`https://social-media-project-s52o.onrender.com/posts/${id}`, {
@@ -48,8 +48,8 @@ function Posts({ id, profilePicture, name, post, media, likes, liked, comments, 
     <div id="posts">
       <div id="post_header">
         <div id="pic_name">
-          <img id="profile_picture" src={profilePicture} />
-          <p>{name}</p>
+          <img id="profile_picture" src={id > 7 ? userPicture : profilePicture} />
+          <p>{id > 7 ? userName : name}</p>
         </div>
         <FontAwesomeIcon id="x_button" icon={faXmark} onClick={handleDeletePost} />
       </div>
