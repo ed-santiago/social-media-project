@@ -1,7 +1,7 @@
 #posts {
-  width: 520px;
-  padding: 20px 120px 0 120px;
-  margin: 16px;
+  width: 40vw;
+  padding: 10px 80px 10px 80px;
+  margin: 16px auto;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
@@ -11,6 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
 
 #pic_name {
@@ -18,6 +19,7 @@
   justify-content: space-between;
   align-items: center;
 }
+
 #pic_name img {
   margin-right: 10px;
 }
@@ -42,43 +44,52 @@
   cursor: pointer;
 }
 
-#posts p {
+#message {
   padding: 10px;
 }
 
 #posts_media {
-  height: 520px;
-  width: 520px;
+  width: 100%;
   object-fit: cover;
   margin-bottom: 8px;
+}
+
+#info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  padding: 10px 10px 16px;
+}
+
+#info > * {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1vw;
 }
 
 #like_comment {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 10px;
 }
 
 #like_comment > * {
   display: flex;
   align-items: center;
   color: gray;
+  gap: 2vw;
 }
 
-#like_comment_amount{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: gray;
-}
+@media screen and (max-width: 640px) {
+  #posts {
+    width: 100%;
+    padding: 0.5vh 1vw;
+  }
 
-#like_comment_amount > * {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 10px 10px 10px;
-}
-
-#like_comment_amount p {
-  padding: 0 0 0 6px;
+  #post_header {
+    padding: 10px;
+  }
 }

@@ -53,9 +53,9 @@ function Posts({ id, profilePicture, name, post, media, likes, liked, comments, 
         </div>
         <FontAwesomeIcon id="x_button" icon={faXmark} onClick={handleDeletePost} />
       </div>
-      <p>{post}</p>
+      <p id="message">{post}</p>
       {postImage}
-      <div id="like_comment_amount">
+      <div id="info">
         <div>
           {likeCount}
           <p>likes</p>
