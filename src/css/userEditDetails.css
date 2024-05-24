@@ -10,6 +10,7 @@
 #save_edit {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 #save {
@@ -35,4 +36,11 @@ form input {
   width: 100%;
   font-size: 1rem;
   margin-top: 1vh;
+}
+
+@media screen and (max-width: 640px) {
+  #edit_form {
+    width: 100%;
+    padding: 20px 10px;
+  }
 }
