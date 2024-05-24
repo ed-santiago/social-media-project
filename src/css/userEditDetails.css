@@ -1,0 +1,38 @@
+#edit_form {
+  padding: 28px 100px;
+  margin-top: 30px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
+  width: 40%;
+}
+
+#save_edit {
+  display: flex;
+  justify-content: space-between;
+}
+
+#save {
+  padding: 8px 20px;
+  background-color: rgb(24, 119, 242);
+  color: white;
+  border-radius: 8px;
+  border: none;
+  font-size: 1.1rem;
+}
+
+form label {
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 2vh;
+}
+
+form input {
+  border-style: none;
+  border-radius: 8px;
+  background-color: rgb(240, 242, 245);
+  padding: 10px;
+  width: 100%;
+  font-size: 1rem;
+  margin-top: 1vh;
+}
