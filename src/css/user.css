@@ -1,34 +1,33 @@
-#user {
-  display: grid;
-  place-items: center;
-  
-}
-
 #user_header {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 28px 100px;
-  margin-top: 30px;
+  gap: 2vw;
+  width: 30vw;
+  padding: 28px 10px;
+  margin: 30px auto;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #user_header img {
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 40px;
+}
+
+#user_header h1 {
+  text-align: center;
 }
 
 #user_friend_amount {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 2vw;
   margin-top: 40px;
-  
 }
 
 #user_edit {
@@ -39,14 +38,33 @@
 }
 
 #user_body {
-  width: 500px;
+  width: 45vw;
   padding: 28px 100px;
-  margin-top: 30px;
+  margin: 30px auto;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #user_body p {
-  margin: 10px;
+  margin: 15px;
+}
+
+@media screen and (max-width: 640px) {
+  #user_header {
+    width: 100%;
+    padding: 20px 10px;
+    flex-direction: column;
+  }
+
+  #user_friend_amount {
+    justify-content: space-between;
+    margin-top: 10px;
+    gap: 2vh;
+  }
+
+  #user_body {
+    width: 100%;
+    padding: 20px 10px;
+  }
 }
