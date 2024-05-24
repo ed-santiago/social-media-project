@@ -13,14 +13,13 @@ function FriendDetails() {
   }, [])
 
   const { name, profilePicture, dob, address, friends, workplace } = friendDetails;
-  console.log(profilePicture)
 
   return (
     <div id="friend_details">
       <div id="friend_details_header">
         <img src={profilePicture} alt="" />
         <div>
-          <h1>{`${name} + Ed`}</h1>
+          <h1>{name}</h1>
           <div id="friend_amount">
             <p><b>Friends:</b> {friends}</p>
             <p id="if_friend">Friend</p>
