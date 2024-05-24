@@ -11,21 +11,23 @@ function Header({ isLoggedIn, onCreatePostClick, profilePicture }) {
     <header>
 
       <div id="header_left">
-        <h1>E</h1>
+        <div id="logo">
+          <h1>e</h1>
+        </div>
         <NavLink to="/login">
-          <FontAwesomeIcon id="logout_icon" icon={faRightFromBracket} />
+          <FontAwesomeIcon className="icon" icon={faRightFromBracket} />
         </NavLink>
         <NavLink exact to="/home">
-          <FontAwesomeIcon id="home_icon" icon={faHouse} />
+          <FontAwesomeIcon className="icon" icon={faHouse} />
         </NavLink>
       </div>
 
-      <button onClick={onCreatePostClick}>Create a post</button>
+      <button onClick={onCreatePostClick}>Create Post</button>
 
-      <div>
-        <FontAwesomeIcon id="notification_icon" icon={faBell} />
+      <div id="header_right">
+        <FontAwesomeIcon className="icon" icon={faBell} />
         <NavLink to="/friends">
-          <FontAwesomeIcon id="friend_icon" icon={faUserGroup} />
+          <FontAwesomeIcon className="icon" icon={faUserGroup} />
         </NavLink>
         <NavLink to="/user">
           <img src={profilePicture} alt="" />
