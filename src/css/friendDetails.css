@@ -1,32 +1,28 @@
-#friend_details {
-  display: grid;
-  place-items: center;
-  
-}
-
 #friend_details_header {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 28px 100px;
-  margin-top: 30px;
+  gap: 2vw;
+  width: 40vw;
+  padding: 28px 75px;
+  margin: 30px auto;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #friend_details_header img {
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 40px;
 }
 
 #friend_amount {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  gap: 2vw;
   margin-top: 40px;
 }
 
@@ -38,14 +34,32 @@
 }
 
 #friend_details_body {
-  width: 500px;
+  width: 45vw;
   padding: 28px 100px;
-  margin-top: 30px;
+  margin: 30px auto;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #friend_details_body p {
-  margin: 10px;
+  margin: 15px;
+}
+
+@media screen and (max-width: 640px) {
+  #friend_details_header {
+    width: 100%;
+    padding: 20px 10px;
+    flex-direction: column;
+  }
+
+  #friend_amount {
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+
+  #friend_details_body {
+    width: 100%;
+    padding: 20px 10px;
+  }
 }
