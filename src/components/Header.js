@@ -1,10 +1,12 @@
 import React from "react";
-import { NavLink } from "react-router-dom/cjs/react-router-dom.min";
+import { NavLink, Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUserGroup, faHouse, faRightFromBracket, faBell } from '@fortawesome/free-solid-svg-icons'
 import "../css/header.css"
 
-function Header({ onCreatePostClick, profilePicture }) {
+function Header({ isLoggedIn, onCreatePostClick, profilePicture }) {
+  if (!isLoggedIn) return <Redirect to="/login" />
+
   return (
     <header>
 
@@ -26,7 +28,7 @@ function Header({ onCreatePostClick, profilePicture }) {
           <FontAwesomeIcon id="friend_icon" icon={faUserGroup} />
         </NavLink>
         <NavLink to="/user">
-          <img src={profilePicture} />
+          <img src={profilePicture} alt="" />
         </NavLink>
       </div>
 

@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Redirect } from "react-router-dom/cjs/react-router-dom.min";
 import CreatePost from "./CreatePost";
 import Posts from "./Posts";
 
-function Home({ isLoggedIn, createPost, userName, userPicture }) {
+function Home({ createPost, userName, userPicture }) {
   const [postsArray, setPostsArray] = useState([]);
 
   useEffect(() => {
@@ -54,8 +53,6 @@ function Home({ isLoggedIn, createPost, userName, userPicture }) {
       />
     );
   });
-
-  if (!isLoggedIn) return <Redirect to="/login" />
 
   return (
     <main>

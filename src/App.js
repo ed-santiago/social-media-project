@@ -29,16 +29,16 @@ function App() {
           <Login setIsLoggedIn={setIsLoggedIn} />
         </Route>
         <Route path="/">
-          <Header onCreatePostClick={handleCreatePostClick} profilePicture={profileDetails.profilePicture} />
+          <Header isLoggedIn={isLoggedIn} onCreatePostClick={handleCreatePostClick} profilePicture={profileDetails.profilePicture} />
         </Route>
       </Switch>
 
       <Route path="/home">
-        <Home isLoggedIn={isLoggedIn} createPost={createPost} userName={profileDetails.name} userPicture={profileDetails.profilePicture} />
+        <Home createPost={createPost} userName={profileDetails.name} userPicture={profileDetails.profilePicture} />
       </Route >
 
       <Switch>
-        <Route exact path="/friends/:id">
+        <Route path="/friends/:id">
           <FriendDetails />
         </Route>
 
