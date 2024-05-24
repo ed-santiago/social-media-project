@@ -44,7 +44,10 @@ function Friends({name, profilePicture}) {
     <div id="friends">
       <div id="friends_header">
         <img src={profilePicture} alt="" />
-        <h1 style={{ fontSize: "48px" }}>{`${name}'s Friend List`}</h1>
+        <div id="user_name">
+          <h1>{`${name}'s`}</h1>
+          <h2>Friend List</h2>
+        </div>
       </div>
 
       <div id="friend_list">

@@ -1,38 +1,40 @@
-#friends {
-  display: grid;
-  place-items: center;
-}
-
 #friends_header {
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 2vw;
+  width: 45vw;
   padding: 28px;
-  margin-top: 30px;
+  margin: 30px auto;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
 }
 
 #friends_header img {
-  width: 180px;
-  height: 180px;
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
-  margin-right: 40px;
+}
+
+#user_name {
+  font-size: 1.5rem;
+  text-align: center;
 }
 
 #friend_list {
   display: grid;
-  margin-top: 20px;
+  padding: 1vw 5vw;
   grid-template-columns: repeat(4, 1fr);
 }
 
 #individual_friend {
   display: flex;
   justify-content: space-around;
-  padding: 20px;
-  margin: 10px;
+  align-items: center;
+  padding: 15px;
+  margin: 15px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 8px 0 rgba(0, 0, 0, 0.2);
@@ -46,14 +48,30 @@
 }
 
 #individual_friend button {
-  background-color: rgb(196, 37, 37);
+  display: flex;
+  background-color: rgb(187, 42, 42);
   border: none;
   color: white;
   padding: 8px 16px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
   font-size: 12px;
-  margin-top: 30px;
+  margin: 15px auto;
   cursor: pointer;
+  border-radius: 8px;
+}
+
+@media screen and (max-width: 640px) {
+  #friends_header {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  #user_name {
+    font-size: 1rem;
+  }
+
+  #friend_list {
+    grid-template-columns: 1fr;
+  }
 }
