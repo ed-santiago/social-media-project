@@ -34,18 +34,10 @@ function Home({ createPost, userName, userPicture }) {
   }
 
   const postElement = postsArray.map((postItem) => {
-    const { id, profilePicture, name, post, media, likes, liked, comments } = postItem;
     return (
       <Posts
-        key={id}
-        id={id}
-        profilePicture={profilePicture}
-        name={name}
-        post={post}
-        media={media}
-        likes={likes}
-        liked={liked}
-        comments={comments}
+        key={postItem.id}
+        postItem={postItem}
         onUpdatedPost={handleUpdatedPost}
         onDeletePost={handleDeletePost}
         userName={userName}

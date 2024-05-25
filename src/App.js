@@ -6,6 +6,7 @@ import Home from "./components/Home";
 import Friends from "./components/Friends";
 import FriendDetails from "./components/FriendDetails";
 import User from "./components/User";
+import Footer from "./components/Footer";
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -35,7 +36,7 @@ function App() {
 
       <Route path="/home">
         <Home createPost={createPost} userName={profileDetails.name} userPicture={profileDetails.profilePicture} />
-      </Route >
+      </Route>
 
       <Switch>
         <Route path="/friends/:id">
@@ -50,6 +51,8 @@ function App() {
       <Route path="/user">
         <User profileDetails={profileDetails} setProfileDetails={setProfileDetails} name={profileDetails.name} />
       </Route>
+
+      {/* <Footer /> */}
     </>
   );
 }
