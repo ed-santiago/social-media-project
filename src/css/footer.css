@@ -4,17 +4,26 @@ footer {
   align-items: center;
   padding: 3vh;
   gap: 1vh;
- }
- 
- #contacts {
-   display: flex;
-   align-items: center;
-   gap: 1vh;
- }
- 
- #contact_icons {
-   display: flex;
-   gap: 2vh;
-   font-size: 2rem;
-   cursor: pointer;
- }
+  margin-top: auto;
+}
+
+#contacts {
+  display: flex;
+  align-items: center;
+  gap: 1vh;
+}
+
+#contact_icons {
+  display: flex;
+  gap: 2vh;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+#contact_icons a:visited {
+  color: black;
+}
+
+a[href^="mailto:"] { 
+  color: black;
+}

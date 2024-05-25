@@ -52,7 +52,7 @@ function App() {
         <User profileDetails={profileDetails} setProfileDetails={setProfileDetails} name={profileDetails.name} />
       </Route>
 
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 }
