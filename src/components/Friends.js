@@ -30,7 +30,7 @@ function Friends({name, profilePicture}) {
     return (
       <div id="individual_friend" key={id}>
         <Link to={`/friends/${id}`}>
-          <img src={profilePicture} />
+          <img src={profilePicture} alt="" />
         </Link >
         <div id="friend_info">
           <h2>{name}</h2>

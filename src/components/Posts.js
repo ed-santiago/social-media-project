@@ -50,7 +50,7 @@ function Posts({ postItem, onUpdatedPost, onDeletePost, userName, userPicture })
     <div id="posts">
       <div id="post_header">
         <div id="pic_name">
-          <img id="profile_picture" src={id > 7 ? userPicture : profilePicture} />
+          <img id="profile_picture" src={id > 7 ? userPicture : profilePicture} alt="" />
           <p>{id > 7 ? userName : name}</p>
         </div>
         <FontAwesomeIcon id="x_button" icon={faXmark} onClick={handleDeletePost} />

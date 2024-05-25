@@ -11,13 +11,13 @@ function Footer() {
       <div id="contacts">
         <h2>Edmond Santiago</h2>
         <div id="contact_icons">
-          <a href="https://github.com/ed-santiago" target="_blank">
+          <a href="https://github.com/ed-santiago" rel="noopener noreferrer" target="_blank">
             <FontAwesomeIcon icon={faGithub} />
           </a>
-          <a href="https://github.com/ed-santiago" target="_blank">
+          <a href="https://github.com/ed-santiago" rel="noopener noreferrer" target="_blank">
             <FontAwesomeIcon icon={faLinkedin} />
           </a>
-          <a href="mailto:edmond.santiago7@gmail.com" target="_blank">
+          <a href="mailto:edmond.santiago7@gmail.com" rel="noopener noreferrer" target="_blank">
             <FontAwesomeIcon icon={faEnvelope} />
           </a>
         </div>

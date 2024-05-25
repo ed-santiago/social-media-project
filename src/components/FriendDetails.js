@@ -10,7 +10,7 @@ function FriendDetails() {
     fetch(`https://social-media-project-s52o.onrender.com/users/${id}`)
       .then((r) => r.json())
       .then((friend) => setFriendDetails(friend))
-  }, [])
+  }, [id])
 
   const { name, profilePicture, dob, address, friends, workplace } = friendDetails;
 

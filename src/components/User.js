@@ -27,7 +27,7 @@ function User({ profileDetails, setProfileDetails }) {
   return (
     <div id="user">
       <div id="user_header">
-        <img src={profileDetails.profilePicture} />
+        <img src={profileDetails.profilePicture} alt="" />
         <div>
           <h1>{profileDetails.name}</h1>
           <div id="user_friend_amount">
