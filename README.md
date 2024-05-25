@@ -41,6 +41,8 @@ Once the app is running in the browser you will be directed to the login page. S
 - Username: user
 - Password: react123
 
+**Please note: opening the website for the first time, may take a minute or so for some content to appear.** As I am using the free version of Render.
+
 ## Approach
 I settled with a social media application because it is one of the common applications built using react. I used FaceBook as my main and only inspiration.
 I copied their color scheme using a Google extention called ColorZilla. I tried my best to imitate the website layout, using mostly grid and flex display.
