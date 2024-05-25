@@ -1,6 +1,6 @@
 # Getting Started with Create React App
 This project was bootstrapped with [Create React App].
-For more details on React and how to use Create React App visit https://github.com/facebook/create-react-app.
+For more details on how to start a React project using Create React App, visit https://github.com/facebook/create-react-app.
 
 ## Project Title
 eworld - social media project
@@ -9,9 +9,19 @@ eworld - social media project
 Access my site at https://zingy-youtiao-88a9a1.netlify.app/login
 
 ## About the app
-eworld is my phase-2 project with Academy Xi. The main goal of the project is to showcase the main concepts I have learnt throughout the phase-2 module.
-I wanted to imitate a social media application because it is one of the main applications that is built using react and to demonstrate react tools such as,
-components, props, hooks, react router and data fetching.
+eworld is my phase-2 project with Academy Xi. The main goal of the project is to showcase the concepts I have learnt throughout the phase-2 module.
+I wanted to imitate a social media application because it is resembles a large scale application, which is one of the main reason of using React. 
+The main features of this web application comes from using full CRUD actions with fetch from my db json server to allow the user to interact with posts, friends and their profile.
+Some main React concepts I've implemented in this project are:
+- Components
+- Import and export
+- JSX
+- Props
+- State
+- Controlled inputs
+- Event handling
+- useEffect hook
+- Client-side routing, React Router v5
 
 ## Technologies
 I began this project by using create-react-app, it is one of the best way to start building a single-page application in React.
@@ -25,12 +35,11 @@ setup and run my server locally every time I need to work on my project.
 Finally, once I finished my project I used another free service called Netlify(https://www.netlify.com/) to deploy my application.
 
 ## Setup
-To view, explore and experiment with the source code, fork and clone this repository, then run "npm install" then "npm start". Feel free to push to your
-cloned repo but pushing the main branch is not allowed.
+To view, explore and experiment with the source code, fork and clone this repository, then run "npm install" then "npm start".
 
 Once the app is running in the browser you will be directed to the login page. Simply put
-Username: esantiago
-Password: edmond123
+- Username: user
+- Password: react123
 
 ## Approach
 I settled with a social media application because it is one of the common applications built using react. I used FaceBook as my main and only inspiration.
@@ -42,4 +51,4 @@ website, changing the URL while maintaining a single-page application.
 This project is finished and I don't plan working on it any further.
 
 ## Credits
-Thank you to Academy Xi for giving the main bulk of resources I need, 
+Thank you to Academy Xi for giving the main bulk of resources I need.
