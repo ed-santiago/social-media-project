@@ -10,6 +10,7 @@ function Posts({ postItem, onUpdatedPost, onDeletePost, userName, userPicture })
   const [openComment, setOpenComment] = useState(false);
   const [like, setLike] = useState(false);
   const [likeCount, setLikeCount] = useState(likes);
+  const [commentCount, setCommentCount] = useState(comments.length);
 
   const postImage = media.length > 0 ? <img id="posts_media" src={media} alt="" /> : null;
 
@@ -36,7 +37,7 @@ function Posts({ postItem, onUpdatedPost, onDeletePost, userName, userPicture })
     setOpenComment((openComment) => !openComment);
   }
 
-  const showComment = openComment ? <Comment id={id} comments={comments} userName={userName} /> : null;
+  const showComment = openComment ? <Comment id={id} comments={comments} userName={userName} setCommentCount={setCommentCount} /> : null;
 
   function handleDeletePost() {
     fetch(`https://social-media-project-s52o.onrender.com/posts/${id}`, {
@@ -63,7 +64,7 @@ function Posts({ postItem, onUpdatedPost, onDeletePost, userName, userPicture })
           <p>likes</p>
         </div>
         <div>
-          {comments.length}
+          {commentCount}
           <p>comments</p>
         </div>
       </div>

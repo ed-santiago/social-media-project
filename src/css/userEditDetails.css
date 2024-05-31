@@ -20,6 +20,7 @@
   border-radius: 8px;
   border: none;
   font-size: 1.1rem;
+  cursor: pointer;
 }
 
 form label {

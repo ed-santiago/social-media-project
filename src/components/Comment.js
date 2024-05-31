@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/comment.css"
 
-function Comment({ id, comments, userName }) {
+function Comment({ id, comments, userName, setCommentCount }) {
   const [newComment, setNewComment] = useState("");
   const [commentArray, setCommentArray] = useState(comments);
 
@@ -37,8 +37,9 @@ function Comment({ id, comments, userName }) {
       })
         .then((r) => r.json())
         .then((updateComment) => {
-          setCommentArray(updateComment.comments)
+          setCommentArray(updateComment.comments);
           setNewComment("");
+          setCommentCount(updateComment.comments.length);
         })
     }
   }

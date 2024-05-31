@@ -35,6 +35,7 @@
   background-color: rgb(24, 119, 242);
   color: white;
   border-radius: 8px;
+  cursor: pointer;
 }
 
 #user_body {
