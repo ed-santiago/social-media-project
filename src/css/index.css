@@ -14,3 +14,10 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+#loader_message {
+  text-align: center;
+  font-size: 1.25rem;
+  font-weight: bold;
+  padding: 5% 1%;
+}

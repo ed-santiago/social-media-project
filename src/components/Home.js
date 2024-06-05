@@ -4,11 +4,15 @@ import Posts from "./Posts";
 
 function Home({ createPost, userName, userPicture }) {
   const [postsArray, setPostsArray] = useState([]);
+  const [loader, setLoader] = useState(true);
 
   useEffect(() => {
     fetch(`https://social-media-project-s52o.onrender.com/posts`)
       .then((res) => res.json())
-      .then((posts) => setPostsArray(posts.reverse()))
+      .then((posts) => {
+        setPostsArray(posts.reverse());
+        setLoader(false);
+      })
   }, [])
 
   const createPostComponent = createPost ? <CreatePost onAddPost={handleAddPost} userName={userName} userPicture={userPicture} /> : null;
@@ -46,10 +50,14 @@ function Home({ createPost, userName, userPicture }) {
     );
   });
 
+  const displayLoader = <p id="loader_message">Please allow 30 seconds or so for posts to load as I'm using the free version of Render.</p>
+
+  const displayPosts = loader ? displayLoader : postElement;
+
   return (
     <main>
       {createPostComponent}
-      {postElement}
+      {displayPosts}
     </main>
   );
 }
